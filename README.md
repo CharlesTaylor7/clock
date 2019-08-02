@@ -1,3 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Do you own an analog clock? Yeah me neither, so I made an App for that.
 
-This is a single page react app that displays the current time. The time is shown as an analog clock. The current time is fetched from [WorldClock](http://worldclockapi.com).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
