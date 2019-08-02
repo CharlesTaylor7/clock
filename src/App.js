@@ -18,10 +18,10 @@ const App = () => {
   const now = new Date();
   const hours = now.getHours() % 12;
   const minutes = now.getMinutes();
-  // const seconds = now.getSeconds();
+  const seconds = now.getSeconds();
 
-  const minuteHandPercentage = minutes / 60;
-  const hourHandPercentage = hours / 12;
+  const minuteHandPercentage = (minutes + (seconds / 60)) / 60;
+  const hourHandPercentage = (hours + minuteHandPercentage) / 12;
 
   const rotate = percentage => `rotate(${360 * percentage}, 50, 50)`;
  debugger;
