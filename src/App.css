@@ -18,7 +18,7 @@
   pointer-events: none;
 }
 
-.minute-hand {
+/* .minute-hand {
   animation: Clock-hand-spin infinite 3600s linear;
   transform-origin: 50% 50%
 }
@@ -26,7 +26,7 @@
 .hour-hand {
   animation: Clock-hand-spin infinite 43200s linear;
   transform-origin: 50% 50%
-}
+} */
 
 @keyframes Clock-hand-spin {
   from {
