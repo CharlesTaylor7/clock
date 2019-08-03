@@ -17,7 +17,7 @@ export const ClockTick = ({ tickOnChange }) => {
     }
   // We don't want to tick immediately after the on button is pressed.
   // Otherwise, you can get a double-tick sound.
-  // We want the ticking sound to be synced with the tickOnChange prop exclusively.
+  // We want the ticking sound to be exclusively synced with the tickOnChange prop.
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tickOnChange])
 
