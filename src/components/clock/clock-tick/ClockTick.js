@@ -1,14 +1,11 @@
 import React, { useRef, useState, useEffect } from 'react';
-import tick from './clock-tick.mp3';
+import tickSound from './clock-tick.mp3';
 
-export const ClockTick = ({ tickOnChange }) => {
-
-  const [on, setOn] = useState(false);
-  const toggle = () => setOn(flag => !flag);
+export const ClockTick = ({ tickOnChange, on }) => {
 
   const ref = useRef(null);
-  if (ref.current) {
-    ref.current.src = tick;
+  if (ref.current && !ref.current.src) {
+    ref.current.src = tickSound;
   }
 
   useEffect(() => {
@@ -27,12 +24,6 @@ export const ClockTick = ({ tickOnChange }) => {
         id="player"
         ref={ref}
       />
-      <button
-        id="ok"
-        onClick={() => toggle()}
-      >
-        {on ? 'Disable Sound' : 'Enable Sound'}
-      </button>
     </>
   );
 }

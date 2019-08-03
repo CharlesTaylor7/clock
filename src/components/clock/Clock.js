@@ -3,8 +3,9 @@ import './Clock.css';
 import { ClockTick } from './clock-tick/ClockTick';
 import { HourMark } from './HourMark';
 
-export const Clock = () => {
+export const Clock = ({ soundOn }) => {
   const [numTicks, setNumTicks] = useState(0);
+
   useEffect(() => {
     setInterval(() => {
       setNumTicks(tick => tick + 1);
@@ -21,7 +22,7 @@ export const Clock = () => {
 
   const rotate = percentage => `rotate(${360 * percentage}, 50, 50)`;
   return (<>
-    <ClockTick tickOnChange={now} />
+    <ClockTick tickOnChange={now} on={soundOn} />
     <svg
       className="clock"
       xmlns="http://www.w3.org/2000/svg"
