@@ -1,0 +1,11 @@
+.icon-attribution {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+  color: #551A8B;
+}
+
+.icon-attribution > a:link {
+  color: #551A8B;
+}
