@@ -21,7 +21,7 @@ export const Clock = () => {
 
   const rotate = percentage => `rotate(${360 * percentage}, 50, 50)`;
   return (<>
-    <ClockTick/>
+    <ClockTick tickOnChange={now} />
     <svg
       className="clock"
       xmlns="http://www.w3.org/2000/svg"
