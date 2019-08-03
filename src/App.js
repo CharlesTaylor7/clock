@@ -59,7 +59,7 @@ const App = () => {
             transform={rotate(hourHandPercentage)}
             x1="50"
             x2="50"
-            y1="20"
+            y1="27.5"
             y2="50"
             stroke="black"
             strokeWidth="2"
@@ -69,7 +69,7 @@ const App = () => {
             transform={rotate(minuteHandPercentage)}
             x1="50"
             x2="50"
-            y1="27.5"
+            y1="20"
             y2="50"
             stroke="black"
             strokeWidth="2"
