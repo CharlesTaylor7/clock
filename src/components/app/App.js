@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import { Clock } from '../clock/Clock';
-import { useToggle } from '../../hooks/useToggle';
 import { SoundButton } from '../sound-button/SoundButton';
 import { IconAttribution } from '../icon-attribution/IconAttribution';
-export const App = () => {
-  const [soundOn, toggleSound] = useToggle(false);
+import { connect } from 'react-redux';
+
+const _App = ({ dispatch }) => {
+  useEffect(() => {
+    dispatch({ type: 'REQUEST_TIME' });
+  }, [dispatch]);
 
   return (
     <div className="App">
-      <SoundButton soundOn={soundOn} toggleSound={toggleSound} />
-      <Clock soundOn={soundOn} />
+      <SoundButton />
+      <Clock />
       <IconAttribution />
     </div>
   );
 };
+
+export const App = connect()(_App);

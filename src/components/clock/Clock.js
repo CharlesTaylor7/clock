@@ -1,28 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Clock.css';
-import { ClockTick } from './clock-tick/ClockTick';
 import { HourMark } from './HourMark';
+import { connect } from 'react-redux';
 
-export const Clock = ({ soundOn }) => {
-  const [numTicks, setNumTicks] = useState(0);
-
-  useEffect(() => {
-    setInterval(() => {
-      setNumTicks(tick => tick + 1);
-    }, 1000);
-  }, []);
-
-  const now = new Date();
-  const hours = now.getHours() % 12;
-  const minutes = now.getMinutes();
-  const seconds = now.getSeconds();
+const _Clock = ({ time }) => {
+  const hours = time.getHours() % 12;
+  const minutes = time.getMinutes();
+  const seconds = time.getSeconds();
 
   const minuteHandPercentage = (minutes + (seconds / 60)) / 60;
   const hourHandPercentage = (hours + minuteHandPercentage) / 12;
 
   const rotate = percentage => `rotate(${360 * percentage}, 50, 50)`;
-  return (<>
-    <ClockTick tickOnChange={now} on={soundOn} />
+  return (
     <svg
       className="clock"
       xmlns="http://www.w3.org/2000/svg"
@@ -52,8 +42,12 @@ export const Clock = ({ soundOn }) => {
       />
       {[...Array(12).keys()].map(HourMark)}
     </svg>
-  </>);
+  );
 };
 
+const mapStateToProps = (state) => ({
+  soundOn: state.soundOn,
+  time: state.time,
+});
 
-
+export const Clock = connect(mapStateToProps)(_Clock);
