@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/clock/static/css/main.50c9a203.chunk.css",
-    "main.js": "/clock/static/js/main.bf216254.chunk.js",
-    "main.js.map": "/clock/static/js/main.bf216254.chunk.js.map",
+    "main.js": "/clock/static/js/main.74789c13.chunk.js",
+    "main.js.map": "/clock/static/js/main.74789c13.chunk.js.map",
     "runtime~main.js": "/clock/static/js/runtime~main.4586ffc4.js",
     "runtime~main.js.map": "/clock/static/js/runtime~main.4586ffc4.js.map",
     "static/js/2.6bffce45.chunk.js": "/clock/static/js/2.6bffce45.chunk.js",
     "static/js/2.6bffce45.chunk.js.map": "/clock/static/js/2.6bffce45.chunk.js.map",
     "index.html": "/clock/index.html",
-    "precache-manifest.a5767c17069d5309f3e102acf1074d1c.js": "/clock/precache-manifest.a5767c17069d5309f3e102acf1074d1c.js",
+    "precache-manifest.95f48491fb32a27c86afac6a8ceda16e.js": "/clock/precache-manifest.95f48491fb32a27c86afac6a8ceda16e.js",
     "service-worker.js": "/clock/service-worker.js",
     "static/css/main.50c9a203.chunk.css.map": "/clock/static/css/main.50c9a203.chunk.css.map",
     "static/media/clock-tick.mp3": "/clock/static/media/clock-tick.70ac3814.mp3",
