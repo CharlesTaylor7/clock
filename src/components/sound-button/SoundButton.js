@@ -16,6 +16,7 @@ const _SoundButton = ({ soundOn, dispatch }) => {
       className="sound-button"
       src={icon}
       onClick={toggleSound}
+      alt={"Toggle sound"}
     />
   )
 }
