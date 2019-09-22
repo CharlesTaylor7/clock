@@ -8,8 +8,7 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import { App } from './components/app/App'
 import * as serviceWorker from './serviceWorker'
 import rootReducer from './reducers'
-import fetchTimeSaga from './sagas/fetchTime'
-import clockTickSaga from './sagas/clockTick'
+import rootSaga from './sagas'
 
 import './index.css'
 
@@ -29,8 +28,7 @@ const store = createStore(
   ),
 );
 
-sagaMiddleware.run(fetchTimeSaga);
-sagaMiddleware.run(clockTickSaga);
+sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
   <Provider store={store} >
