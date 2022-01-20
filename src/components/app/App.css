@@ -13,8 +13,8 @@
 }
 
 footer {
-    display: flex;
-    justify-content: flex-end;
+    position: fixed;
+    bottom: 12px;
     font-size: 12px;
     width: 100%;
 }
