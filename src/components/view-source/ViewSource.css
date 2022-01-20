@@ -1,0 +1,11 @@
+.view-source {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.view-source > img {
+    height: 20px;
+    padding-right: 6px;
+}
+
